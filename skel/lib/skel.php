@@ -772,6 +772,22 @@ class skel {
         );
     }
 
+    public static function _init__cleanup_header() {
+        remove_action('wp_head', 'wp_generator');
+        remove_action('wp_head', 'rsd_link');
+        remove_action('wp_head', 'wlwmanifest_link');
+    }
+
+    public static function _init__tweek_adminpage() {
+        // disable quick post
+        add_action(
+            'wp_dashboard_setup',
+            function () {
+                remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side');
+            }
+        );
+    }
+
     //
 
     private static function _init() {
@@ -785,6 +801,8 @@ class skel {
         self::_init__theme_customizer();
         self::_init__widgets();
         self::_init__customizer();
+        self::_init__cleanup_header();
+        self::_init__tweek_adminpage();
         self::_init__enqueue_files();
     }
 
