@@ -1,5 +1,11 @@
 /* SKEL: GUI */
 /* SKEL: GUI
+    semantic ui modification
+*/
+.ui.header:first-child {
+    margin-top: 0 !important;
+}
+/* SKEL: GUI
     utilities
 */
 /* SKEL: GUI
