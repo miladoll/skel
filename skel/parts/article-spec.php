@@ -85,50 +85,62 @@
             </data>
         </span>
     </li>
-    <li
-        class="skel--gui--article-spec-comments"
-    >
-        <i class="comments outline icon">
-            <span><?php _e('Comments', 'skel'); ?></span>
-        </i>
-        <span>
-            <a
-                title="<?php _e('Comments', 'skel'); ?>"
-                href=""
-            >
-                <data><?php
-                    echo get_comments([
-                        'status' => 'approve',
-                        'post_id'=> get_the_ID(),
-                        'type'=> 'comment',
-                        'count' => true
-                    ]);
-                ?></data>
-            </a>
-        </span>
-    </li>
-    <li
-        class="skel--gui--article-spec-trackbacks"
-    >
-        <i class="browser icon">
-            <span><?php _e('Trackbacks', 'skel'); ?></span>
-        </i>
-        <span>
-            <a
-                title="<?php _e('Trackbacks', 'skel'); ?>"
-                href=""
-            >
-                <data><?php
-                    echo get_comments([
-                        'status' => 'approve',
-                        'post_id'=> get_the_ID(),
-                        'type'=> 'pings',
-                        'count' => true
-                    ]);
-                ?></data>
-            </a>
-        </span>
-    </li>
+    <?php
+        if ( comments_open() ) :
+    ?>
+        <li
+            class="skel--gui--article-spec-comments"
+        >
+            <i class="comments outline icon">
+                <span><?php _e('Comments', 'skel'); ?></span>
+            </i>
+            <span>
+                <a
+                    title="<?php _e('Comments', 'skel'); ?>"
+                    href=""
+                >
+                    <data><?php
+                        echo get_comments([
+                            'status' => 'approve',
+                            'post_id'=> get_the_ID(),
+                            'type'=> 'comment',
+                            'count' => true
+                        ]);
+                    ?></data>
+                </a>
+            </span>
+        </li>
+    <?php
+        endif;
+    ?>
+    <?php
+        if ( pings_open() ) :
+    ?>
+        <li
+            class="skel--gui--article-spec-trackbacks"
+        >
+            <i class="browser icon">
+                <span><?php _e('Trackbacks', 'skel'); ?></span>
+            </i>
+            <span>
+                <a
+                    title="<?php _e('Trackbacks', 'skel'); ?>"
+                    href=""
+                >
+                    <data><?php
+                        echo get_comments([
+                            'status' => 'approve',
+                            'post_id'=> get_the_ID(),
+                            'type'=> 'pings',
+                            'count' => true
+                        ]);
+                    ?></data>
+                </a>
+            </span>
+        </li>
+    <?php
+        endif;
+    ?>
 </ul><!-- class="skel--gui--article-specs skel--gui--flat-lists" -->
 <div class="skel--tag">
 </div>

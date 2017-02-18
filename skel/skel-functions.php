@@ -2,6 +2,7 @@
 
 /*
 TODO:
+[] タイトル・日付のリンク先をページ内リンクにする
 [] SMARTPHONE DISPLAY/NON-DISPLAY
 [] COMMENT SUBMIT PAGE
 [] COMMENT LIST PAGE
