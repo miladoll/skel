@@ -1,0 +1,6 @@
+{
+    line: "line",
+    hatena-bookmark: "hatena-bookmark",
+    barcode: "barcode",
+    qrcode: "qrcode"
+}

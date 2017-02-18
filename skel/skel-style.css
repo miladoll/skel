@@ -1,0 +1,80 @@
+/*
+    Theme Name: skel
+    Description: Skelton theme for WordPress
+    Author: MILADOLL Decchi
+*/
+
+/*
+    STEM
+*/
+body,
+header,
+.header,
+.ui.list .list>.item .header,
+.ui.list>.item .header,
+.ui.button,
+.item {
+    font-family:
+        -apple-system, BlinkMacSystemFont,
+        "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic,
+        Meiryo,
+        Lato, "Helvetica Neue", Arial, Helvetica,
+        sans-serif
+    ;
+}
+body,
+header,
+.header,
+.ui.list .list>.item .header,
+.ui.list>.item .header,
+.item {
+    word-wrap: break-word;
+}
+h1, h2, h3, h4, h5, h6, h7, h8 {
+}
+[itemprop="articleBody"] {
+}
+pre {
+    overflow-y: hidden;
+}
+pre,
+code,
+var,
+samp,
+kbd {
+    font-family:
+        Consolas,
+        'Courier New', Courier, Monaco,
+        monospace
+    ;
+}
+
+/*
+    UTILITY CLASSES
+*/
+.clearfix:after {
+    display: block !important;
+    content: " " !important;
+    clear: both !important;
+    height: 0 !important;
+}
+.skel--centers {
+    text-align: center !important;
+}
+.skel--nowraps {
+    white-space: nowrap !important;
+}
+.skel--text-hides {
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 0px;
+    line-height: 0;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+}
+

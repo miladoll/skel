@@ -1,0 +1,383 @@
+# WordPress Blank Pot
+# Copyright (C) 2014 ...
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Skel - WordPress theme v0.9.1\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2017-02-18 09:27+0900\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: MILA DOLL <no@example.com>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,"
+"_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+
+#: js/media-uploader.js:137 js/media-uploader.js:142
+msgid "choose-image"
+msgstr "画像を選択する"
+
+#: lib/skel.php:54
+msgid "..."
+msgstr "..."
+
+#: lib/skel.php:58
+msgid "read more"
+msgstr "続きを読む"
+
+#: lib/skel.php:242
+msgid "Articles"
+msgstr "記事一覧"
+
+#: lib/skel.php:245
+msgid "Category: "
+msgstr "カテゴリー別："
+
+#: lib/skel.php:249
+msgid "Search: "
+msgstr "検索結果："
+
+#: lib/skel.php:267
+msgid "Date: "
+msgstr "日別："
+
+#: lib/skel.php:271
+msgid "Tag: "
+msgstr "タグ別："
+
+#: lib/skel.php:275
+msgid "Author: "
+msgstr "投稿者別："
+
+#: lib/skel.php:411
+msgid "Related Posts"
+msgstr "関連記事"
+
+#: lib/skel.php:576
+msgid "Site Global Menu"
+msgstr "サイトグローバルメニュー"
+
+#: lib/skel.php:577
+msgid "Site Global Menu Aside"
+msgstr "サイトグローバルメニュー（脇）"
+
+#: lib/skel_config_customizer_confs.php:7
+msgid "Basis of Design"
+msgstr "基本デザイン"
+
+#: lib/skel_config_customizer_confs.php:16
+msgid "Whether disable CSS for pretty print or not"
+msgstr "装飾目的のCSSをオフにする"
+
+#: lib/skel_config_customizer_confs.php:17
+msgid "Disable Pretty CSS"
+msgstr "装飾目的CSSのオフ"
+
+#: lib/skel_config_customizer_confs.php:21
+msgid "No (default)"
+msgstr "しない（デフォルト）"
+
+#: lib/skel_config_customizer_confs.php:22
+msgid "Disable"
+msgstr "オフにする"
+
+#: lib/skel_config_customizer_confs.php:31
+msgid "Whether set sidebar left or right"
+msgstr "サイドバーを左に置くか右に置くか"
+
+#: lib/skel_config_customizer_confs.php:32
+msgid "Set Sidebar Right"
+msgstr "サイドバーの右置き"
+
+#: lib/skel_config_customizer_confs.php:36
+msgid "Left (default)"
+msgstr "左（デフォルト）"
+
+#: lib/skel_config_customizer_confs.php:37
+msgid "Right"
+msgstr "右"
+
+#: lib/skel_config_customizer_confs.php:46
+msgid ""
+"Display format string in article bodies (default: same as the system setting"
+msgstr ""
+"記事本文中での日時表示フォーマット文字列（デフォルト：システム設定とおなじ）"
+
+#: lib/skel_config_customizer_confs.php:47
+msgid "Date and Time: In Article Bodies"
+msgstr "日付・日時（記事本文中）"
+
+#: lib/skel_config_customizer_confs.php:57
+msgid "Site Administration"
+msgstr "サイトの管理"
+
+#: lib/skel_config_customizer_confs.php:66
+msgid "Google Search Console"
+msgstr "Googleサーチコンソール"
+
+#: lib/skel_config_customizer_confs.php:69
+msgid "set value of META tag"
+msgstr "Webコンソール所有確認用METAタグの値を入力する"
+
+#: lib/skel_config_customizer_confs.php:77
+msgid "Google Analytics"
+msgstr "Googleアナリティクス"
+
+#: lib/skel_config_customizer_confs.php:80
+msgid "set accounting tag"
+msgstr "アナリティクス管理用タグを入力する"
+
+#: lib/skel_config_customizer_confs.php:88
+msgid "Google Tag Manager"
+msgstr "Googleタグマネージャ"
+
+#: lib/skel_config_customizer_confs.php:91
+msgid "set manager container-ID (such as `GTM-xxxxx`)"
+msgstr "タグマネージャのコンテナID（`GTM-xxxxx`のような）を入力する"
+
+#: lib/skel_config_customizer_confs.php:99
+msgid "SNS Related"
+msgstr "SNS関連"
+
+#: lib/skel_config_customizer_confs.php:108
+msgid "Twitter"
+msgstr "Twitter"
+
+#: lib/skel_config_customizer_confs.php:111
+msgid "set account name (without @)"
+msgstr "アカウント名（@を除く）を入力する"
+
+#: lib/skel_config_customizer_confs.php:119
+msgid "Facebook"
+msgstr "Facebook"
+
+#: lib/skel_config_customizer_confs.php:122
+msgid "set URL for user page/facebook page"
+msgstr "FacebookアカウントまたはページのURLを入力する"
+
+#: lib/skel_config_customizer_confs.php:130
+msgid "Instagram"
+msgstr "Instagram"
+
+#: lib/skel_config_customizer_confs.php:133
+msgid "set URL for Instagram page"
+msgstr "InstagramのページURLを入力する"
+
+#: lib/skel_config_widget_areas.php:5
+msgid "Widgets: Full Width Header"
+msgstr "サイドバー: 横幅いっぱいのヘッダ"
+
+#: lib/skel_config_widget_areas.php:6
+msgid "the widget space located to head of pages with full width"
+msgstr "ヘッダ部分で横幅いっぱいに展開するウィジェット用スペース"
+
+#: lib/skel_config_widget_areas.php:10
+msgid "Widgets: Body Aside"
+msgstr "サイドバー: 本文脇"
+
+#: lib/skel_config_widget_areas.php:11
+msgid "the widget space located to right or left of main article"
+msgstr "本文左右どちらかの脇に展開するウィジェット用スペース"
+
+#: lib/skel_config_widget_areas.php:15
+msgid "Widgets: Full Width Footer"
+msgstr "サイドバー: 横幅いっぱいのフッタ"
+
+#: lib/skel_config_widget_areas.php:16
+msgid "the widget space located to foot of pages with full width"
+msgstr "フッタ部分で横幅いっぱいに展開するウィジェット用スペース"
+
+#: lib/skel_config_widget_areas.php:20
+msgid "Widgets: Header : Left"
+msgstr "サイドバー: ヘッダ（左）"
+
+#: lib/skel_config_widget_areas.php:21
+msgid "the widget space located to head of pages : left (first)"
+msgstr "ヘッダ部分で横三連のうち左（最初）のウィジェット用スペース"
+
+#: lib/skel_config_widget_areas.php:25
+msgid "Widgets: Header : Center"
+msgstr "サイドバー:  ヘッダ（中央）"
+
+#: lib/skel_config_widget_areas.php:26
+msgid "the widget space located to head of pages : center (2nd)"
+msgstr "ヘッダ部分で横三連のうち中央（二番目）のウィジェット用スペース"
+
+#: lib/skel_config_widget_areas.php:30
+msgid "Widgets: Header : Right"
+msgstr "サイドバー: ヘッダ（右）"
+
+#: lib/skel_config_widget_areas.php:31
+msgid "the widget space located to head of pages : right (last)"
+msgstr "ヘッダ部分で横三連のうち右（三番目）のウィジェット用スペース"
+
+#: lib/skel_config_widget_areas.php:35
+msgid "Widgets: Footer : Left"
+msgstr "サイドバー: フッタ（左）"
+
+#: lib/skel_config_widget_areas.php:36
+msgid "the widget space located to foot of pages : left (first)"
+msgstr "フッタ部分で横三連のうち左（最初）のウィジェット用スペース"
+
+#: lib/skel_config_widget_areas.php:40
+msgid "Widgets: Footer : Center"
+msgstr "サイドバー:  フッタ（中央）"
+
+#: lib/skel_config_widget_areas.php:41
+msgid "the widget space located to foot of pages : center (2nd)"
+msgstr "フッタ部分で横三連のうち中央（二番目）のウィジェット用スペース"
+
+#: lib/skel_config_widget_areas.php:45
+msgid "Widgets: Footer : Right"
+msgstr "サイドバー: フッタ（右）"
+
+#: lib/skel_config_widget_areas.php:46
+msgid "the widget space located to foot of pages : right (last)"
+msgstr "フッタ部分で横三連のうち右（三番目）のウィジェット用スペース"
+
+#: lib/skel_widget.php:5
+msgid "Widget"
+msgstr "ウィジェット"
+
+#: lib/skel_widget.php:11
+msgid "Widget Description"
+msgstr "ウィジェットの説明"
+
+#: lib/skel_widget.php:17 lib/skel_widget_profile.php:13
+#: lib/skel_widget_search.php:13 lib/skel_widget_tagcloud.php:13
+msgid "title"
+msgstr "タイトル"
+
+#: lib/skel_widget.php:170 lib/skel_widget.php:174
+msgid "Choose Image"
+msgstr "画像を選択する"
+
+#: lib/skel_widget.php:171
+msgid "show in new window"
+msgstr "別ウインドウで開く"
+
+#: lib/skel_widget.php:172
+msgid "Dismisss"
+msgstr "取り消す"
+
+#: lib/skel_widget_profile.php:4
+msgid "Profile"
+msgstr "プロフィール"
+
+#: lib/skel_widget_profile.php:7
+msgid "Profile of Site Owner"
+msgstr "運営者プロフィール"
+
+#: lib/skel_widget_profile.php:17
+msgid "Owner Name"
+msgstr "運営者の名前"
+
+#: lib/skel_widget_profile.php:21
+msgid "Profile Text"
+msgstr "プロフィール文"
+
+#: lib/skel_widget_profile.php:25
+msgid "Profile Image"
+msgstr "プロフィール画像"
+
+#: lib/skel_widget_profile.php:62
+#, php-format
+msgid "Check tweets of %s"
+msgstr "%s のTwitterをチェックする"
+
+#: lib/skel_widget_search.php:4
+msgid "Site Search"
+msgstr "サイト内検索"
+
+#: lib/skel_widget_search.php:7
+msgid "Search Box for This Site"
+msgstr "このサイト内の検索"
+
+#: lib/skel_widget_tagcloud.php:4
+msgid "Tag Cloud"
+msgstr "タグ"
+
+#: lib/skel_widget_tagcloud.php:7
+msgid "Tag Cloud for This Site Articles"
+msgstr "このサイト内の記事のタグ"
+
+#: parts/article-prev-nexts.php:22
+msgid "Next Article"
+msgstr "次の記事"
+
+#: parts/article-prev-nexts.php:43
+msgid "Previous Article"
+msgstr "前の記事"
+
+#: parts/article-spec.php:10
+msgid "Date"
+msgstr "日付"
+
+#: parts/article-spec.php:37 parts/article-spec.php:44
+msgid "Author"
+msgstr "投稿者"
+
+#: parts/article-spec.php:58
+msgid "Categories"
+msgstr "カテゴリ"
+
+#: parts/article-spec.php:74
+msgid "Tags"
+msgstr "タグ"
+
+#: parts/article-spec.php:92 parts/article-spec.php:96
+msgid "Comments"
+msgstr "コメント"
+
+#: parts/article-spec.php:114 parts/article-spec.php:118
+msgid "Trackbacks"
+msgstr "トラックバック"
+
+#: parts/breadcrumb.php:19 parts/menu-siteglobal.php:10
+#: parts/page-header-siteglobal.php:13 parts/page-header-siteglobal.php:23
+msgid "Home"
+msgstr "ホーム"
+
+#: parts/jumptotop.php:3
+msgid "Jump to top"
+msgstr "ページの最初へ"
+
+#: parts/pager.php:21
+msgid "Previous"
+msgstr "前ページ"
+
+#: parts/pager.php:63
+msgid "Next"
+msgstr "次ページ"
+
+#: parts/searchform.php:11
+msgid "keywords"
+msgstr "キーワード"
+
+#: parts/searchform.php:17
+msgid "Search"
+msgstr "検索"
+
+#~ msgid "set manager tag"
+#~ msgstr "タグマネージャタグを入力する"
+
+#~ msgid "Google Web Console"
+#~ msgstr "Google Webコンソール"
+
+#~ msgid "site_administration"
+#~ msgstr "サイト管理"
+
+#~ msgid "basis_of_design"
+#~ msgstr "基本デザイン"

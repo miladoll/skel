@@ -1,0 +1,11 @@
+/*
+    Theme Name: skel
+    Description: Skelton theme for WordPress
+    Author: MILADOLL Decchi
+    Version: 0.9.1
+*/
+
+/*
+    `skel` uses function.php's wp_enqueue_style() to load skel stem CSS.
+    Here you can write rules to override them.
+*/
