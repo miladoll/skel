@@ -36,7 +36,13 @@
                     'echo' => false
                 ]);
                 if ( $menu ) {
-                    echo preg_replace( '/(class=")/', '${1}right aligned ', $menu );
+                    ?>
+                        <ul class="right menu">
+                    <?php
+                            echo $menu;
+                    ?>
+                        </ul>
+                    <?php
                 }
             } );
         ?>
