@@ -2,6 +2,7 @@
 
 /*
 TODO:
+[] nav_menu 'menu' => 'menu_site_global' がなかったらつくる、みたいな
 [] タイトル・日付のリンク先をページ内リンクにする
 [] テーマロケーション表示
 [] SMARTPHONE DISPLAY/NON-DISPLAY

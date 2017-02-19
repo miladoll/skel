@@ -280,6 +280,34 @@ class skel {
         ]);
     }
 
+    public static function get_nav_menu_arrays ( $opt ) {
+        $opt['echo'] =
+            ( $opt['echo'] != '' )
+            ? $opt['echo']
+            : false
+        ;
+        $menu = wp_nav_menu( $opt );
+        $items = [];
+        foreach ( ( preg_split( '/<\/li>/', $menu ) ) as $raw_item ) {
+            $matches = explode( '>', $raw_item );
+            $id_class = preg_replace( '/^<[^\s]+\s+/im', '', $matches[0] );
+            $link = preg_replace( '/^<[^\s]+\s+href=\"/im', '', $matches[1] );
+            $link = preg_replace( '/"/', '', $link );
+            $esc_label = preg_replace(
+                '/^.*<a\s{0,}.*?>([^<]+)<\/a>.{0,}$/im',
+                "$1",
+                $raw_item
+            );
+            if ( ! $link ) continue;
+            array_push( $items, [
+                'id_class' => $id_class,
+                'link' => $link,
+                'esc_label' => $esc_label
+            ]);
+        }
+        return( $items );
+    }
+
     public static function get_user_avatar_url( $ID ) {
         $avatar_html = get_avatar( $ID, 96 );
         preg_match( '/^.*src=[\'"]([^\'"]+)[\'"].*$/', $avatar_html, $matches );
@@ -575,6 +603,7 @@ class skel {
         register_nav_menus([
             'location__menu_site_global' => __('Site Global Menu', 'skel'),
             'location__menu_site_global_aside' => __('Site Global Menu Aside', 'skel'),
+            'location__menu_site_global_dropdown' => __('Site Global Menu Dropdown', 'skel'),
         ]);
         add_filter(
             'nav_menu_css_class',

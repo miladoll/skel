@@ -67,6 +67,20 @@ ul.horizontal.data-items li > .content {
     width: auto;
 }
 /* SKEL: GUI:
+    navigation menus
+*/
+.skel--sticky-menus a {
+    color: rgba( 0, 0, 0, .87 ) !important;
+}
+.skel--sticky-menus li {
+    list-style-type: none;
+}
+.skel--sticky-menus .ui.menu .dropdown.item .menu .item:before  {
+    /*> .menu > .item:before*/
+    display: none;
+    content: none;
+}
+/* SKEL: GUI:
     breadcrumbs
 */
 .skel--gui--breadcrumbs {
@@ -650,6 +664,7 @@ hr + .skel--gui--articles {
     display: block;
     position: relative;
     width: 100%;
+    min-width: 380px;
     background:
         top center
         no-repeat
@@ -669,6 +684,7 @@ hr + .skel--gui--articles {
     padding: 0;
     width: 100%;
     min-width: 360px;
+    display: block;
 }
 #skel--page-header {
     height: 180px;
@@ -719,6 +735,9 @@ hr + .skel--gui--articles {
     text-shadow: 0px 1px 0.5px rgb( 200, 200, 200 );
     -webkit-tap-highlight-color: transparent;
     background: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 /* SKEL: GUI:
     colouring and beatifying
