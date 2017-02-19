@@ -591,6 +591,15 @@ hr + .skel--gui--articles {
 .skel--gui--widgets .widget-bodies > ul:not([class]) {
     padding-left: 2em;
 }
+/* recent posts */
+.skel--gui--widgets .widget-bodies > ul:not([class]) > li > .post-date {
+}
+.skel--gui--widgets .widget-bodies > ul:not([class]) > li > .post-date:before {
+    content: " (";
+}
+.skel--gui--widgets .widget-bodies > ul:not([class]) > li > .post-date:after {
+    content: ")";
+}
 /* categories list */
 .skel--gui--widgets .widget-bodies li.cat-post-item {
     display: list-item;

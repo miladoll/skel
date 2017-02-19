@@ -53,6 +53,11 @@ add_action(
                 'slug' => 'wp-to-twitter',
                 'source' => $plugin_source . 'wp-to-twitter.zip',
             ),
+            array(
+                'name' => 'Widget Options',
+                'slug' => 'widget-options',
+                'source' => $plugin_source . 'widget-options.zip',
+            ),
         );
 
         $config = array(

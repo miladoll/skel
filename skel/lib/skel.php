@@ -234,6 +234,15 @@ class skel {
         return( $tags );
     }
 
+    public static function show_the_post_ID_fragment() {
+        $id = get_the_ID();
+        if ( empty( $id ) ) return;
+        echo
+            '#post-'
+            . esc_attr( $id )
+        ;
+    }
+
     public static function get_archive_title_and_icon () {
         if ( is_single() || is_page() || is_home() ) {
             return;

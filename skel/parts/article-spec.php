@@ -15,7 +15,7 @@
                 itemprop="datePublished"
             >
                 <a
-                    href="<?php the_permalink(); ?>"
+                    href="<?php the_permalink(); ?><?php skel::show_the_post_ID_fragment();?>"
                     title="<?php the_title(); ?>"
                 >
                     <?php
