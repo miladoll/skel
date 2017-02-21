@@ -220,7 +220,9 @@ class skel {
 
     public static function get_tagcloud_array() {
         $tags = [];
-        foreach ( wp_tag_cloud( 'format=array' ) as $tag ) {
+        $base_html = wp_tag_cloud( 'format=array' );
+        if ( !$base_html ) return( $tags );
+        foreach ( $base_html as $tag ) {
             preg_match( '/^<a.*?href=[\'"]([^\'"]+)[\'"].*title=[\'"]([0-9]+).*?[\'"]>([^<]+)<.*$/i', $tag, $matches );
             array_push(
                 $tags,
@@ -302,16 +304,18 @@ class skel {
             $id_class = preg_replace( '/^<[^\s]+\s+/im', '', $matches[0] );
             $link = preg_replace( '/^<[^\s]+\s+href=\"/im', '', $matches[1] );
             $link = preg_replace( '/"/', '', $link );
-            $esc_label = preg_replace(
-                '/^.*<a\s{0,}.*?>([^<]+)<\/a>.{0,}$/im',
+            $label = preg_replace(
+                '/^.*<a\s{0,}.*?>(.*?)<\/a>.{0,}$/im',
                 "$1",
                 $raw_item
             );
+            $esc_label = esc_html( $label );
             if ( ! $link ) continue;
             array_push( $items, [
                 'id_class' => $id_class,
                 'link' => $link,
-                'esc_label' => $esc_label
+                'esc_label' => $esc_label,
+                'label' => $label
             ]);
         }
         return( $items );
@@ -322,6 +326,50 @@ class skel {
         preg_match( '/^.*src=[\'"]([^\'"]+)[\'"].*$/', $avatar_html, $matches );
         $url = $matches[1];
         return( $url );
+    }
+
+    public static function get_proper_excerpt() {
+        $this_post = get_post( get_the_ID() );
+        $content = get_the_excerpt();
+        if ( strlen( $content ) < 1 ) {
+            $content = $this_post->post_content;
+        }
+        $content = preg_replace( '/\[[^\]]{0,}\]/m', '', $content );
+        $content = wp_strip_all_tags( $content );
+        $content = preg_replace( '/\s+/m', ' ', $content );
+        $content = substr(
+            $content, 0, self::DEFAULT_EXCERPT_LENGTH
+        );
+        return( $content );
+    }
+
+    public static function get_current_post_data() {
+        $q = new WP_Query($GLOBALS['wp_query']);
+        $data = [
+            'flourish_title' => wp_get_document_title(),
+        ];
+        if ( $q->have_posts() ) {
+            $data = array_merge(
+                 [
+                    'title' => get_the_title(),
+                    'url' => get_permalink(),
+                    'description' => skel::get_proper_excerpt(),
+                ],
+                $data
+            );
+        }
+        if ( is_home() ) {
+            $data = array_merge(
+                 [
+                    'title' => get_bloginfo( 'name' ),
+                    'url' => home_url(),
+                    'description' => get_bloginfo( 'description' ),
+                ],
+                $data
+            );
+        }
+        wp_reset_postdata();
+        return( $data );
     }
 
     public static function PREFIX_WIDGET_AREA_NAME() {

@@ -17,3 +17,4 @@
         <?php _e('Search', 'skel'); ?>
     </button>
 </form><!-- class="widget-parts-site-search" -->
+<div><br clear="both"></div>

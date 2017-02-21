@@ -20,7 +20,7 @@
     color: rgba(68, 68, 68, 0.701961);
     text-shadow: 0px 1px 0.5px rgb( 200, 200, 200 );
 }
-#skel--page-header {
+#skel--page-header:before {
     background-image: url( <?php echo skel::get_uri_only_path( get_header_image() ); ?> );
 }
 </style>

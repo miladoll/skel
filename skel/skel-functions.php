@@ -2,7 +2,8 @@
 
 /*
 TODO:
-[] タイトル・日付のリンク先をページ内リンクにする
+[] 固定ページってちゃんとできるの？
+[] 他プラグインの翻訳入れられないかなあ
 [] COMMENT SUBMIT PAGE
 [] COMMENT LIST PAGE
 [] TRACKBACK PAGE

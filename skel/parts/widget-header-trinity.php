@@ -9,7 +9,7 @@
         WIDGET AREA UNDER TOP COLUMN
     -->
     <div
-        class="ui basic segment skel--gui--widgets-wrappers"
+        class="ui clearing basic segment skel--gui--widgets-wrappers"
         data-skel-area="header-trinity"
     >
         <aside

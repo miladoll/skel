@@ -18,20 +18,30 @@ class skel_widget_tagcloud extends skel_widget {
         return( 'skel--gui--widgets-tagcloud' );
     }
     public function CONTENT( $instance = [] ) {
-        echo '<ul class="skel--gui--tagclouds">';
-        foreach ( skel::get_tagcloud_array() as $tag ) {
+        $tags = skel::get_tagcloud_array();
+        if ( !$tags ) :
 ?>
-    <li>
-        <a
-            href="<?php echo esc_attr( $tag['link'] ); ?>"
-            title="<?php echo esc_attr( $tag['title'] ); ?>"
-        >
-            <?php echo esc_html( $tag['title'] ); ?>
-        </a>
-        <span>
-            <?php echo esc_html( $tag['count'] ); ?>
-        </span>
-    </li>
+            <p>
+                <?php _e('No tags, yet.', 'skel'); ?>
+            </p>
+<?php
+            return;
+        endif;
+        echo '<ul class="skel--gui--tagclouds">';
+        foreach ( $tags as $tag ) {
+?>
+            <li>
+                <i class="ui tag icon"></i>
+                <a
+                    href="<?php echo esc_attr( $tag['link'] ); ?>"
+                    title="<?php echo esc_attr( $tag['title'] ); ?>"
+                >
+                    <?php echo esc_html( $tag['title'] ); ?>
+                </a>
+                <span>
+                    <?php echo esc_html( $tag['count'] ); ?>
+                </span>
+            </li>
 <?php
         }
         echo '</ul>';

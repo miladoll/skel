@@ -12,6 +12,21 @@ $confs = [
         'setting' =>
         [
             'type' => 'radio',
+            'name' => 'basis_of_design__disable_header_searchbox',
+            'description' => __( 'Whether disable searchbox in sticky header or not', 'skel' ),
+            'label' => __( 'Disable Header Searchbox', 'skel' ),
+            'section' => 'basis_of_design',
+            'default' => 'no',
+            'choices' => [
+                'no'   => __( 'No (default)', 'skel' ),
+                'disable'  => __( 'Disable', 'skel' )
+            ]
+        ]
+    ],
+    [
+        'setting' =>
+        [
+            'type' => 'radio',
             'name' => 'basis_of_design__disable_pretty_css',
             'description' => __( 'Whether disable CSS for pretty print or not', 'skel' ),
             'label' => __( 'Disable Pretty CSS', 'skel' ),
@@ -104,6 +119,17 @@ $confs = [
         'setting' =>
         [
             'type' => 'text',
+            'name' => 'sns__ownername',
+            'label' => __( 'Owner Name', 'skel' ),
+            'section' => 'sns',
+            'default' => '',
+            'description' => __( 'オーナー名', 'skel' )
+        ]
+    ],
+    [
+        'setting' =>
+        [
+            'type' => 'text',
             'name' => 'sns__twitter',
             'label' => __( 'Twitter', 'skel' ),
             'section' => 'sns',
@@ -131,6 +157,17 @@ $confs = [
             'section' => 'sns',
             'default' => '',
             'description' => __( 'set URL for Instagram page', 'skel' )
+        ]
+    ],
+    [
+        'setting' =>
+        [
+            'type' => 'url',
+            'name' => 'sns__github',
+            'label' => __( 'GitHub', 'skel' ),
+            'section' => 'sns',
+            'default' => '',
+            'description' => __( 'set URL for Github page', 'skel' )
         ]
     ]
 ];

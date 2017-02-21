@@ -49,9 +49,9 @@
         skel::include_parts( '/skel/parts/widget-header-trinity.php' );
     ?>
 
-    <div class="ui basic segment">
+    <div class="ui clearing basic segment">
 
-        <div id="page-body" class="ui stackable not-divided grid">
+        <div id="page-body" class="ui clearing stackable not-divided grid">
 
             <?php
                 if (

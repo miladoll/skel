@@ -5,6 +5,9 @@
 .ui.header:first-child {
     margin-top: 0 !important;
 }
+.skel--gui--widgets aside > .header {
+    margin-top: 1em !important;
+}
 /* SKEL: GUI
     utilities
 */
@@ -79,6 +82,33 @@ ul.horizontal.data-items li > .content {
     /*> .menu > .item:before*/
     display: none;
     content: none;
+}
+.skel--sticky-menus .ui.menu .item.skel--gui--global-search-in-headers {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.skel--sticky-menus .ui.menu .item.skel--gui--global-search-in-headers:before {
+    content: none;
+    display: none;
+}
+.skel--sticky-menus .ui.menu .item.skel--gui--global-search-in-headers form {
+}
+@media screen and ( max-width:770px ) {
+    .skel--gui--global-search-in-headers {
+        display: none !important;
+    }
+}
+/*
+    when smartphone
+    <span> in .item disappears
+*/
+@media screen and ( max-width:770px ) {
+    .skel--sticky-menus .item span {
+        display: none;
+    }
+    .skel--sticky-menus .item i.ui.icon {
+        font-size: 140%;
+    }
 }
 /* SKEL: GUI:
     breadcrumbs
@@ -313,6 +343,11 @@ ul.horizontal.data-items li > .content {
 .skel--gui--article-footers {
     clear: both;
 }
+.skel--gui--article-footers {
+    border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+    margin-top: 2em !important;
+    margin-left: 1.2em !important;
+}
 .skel--gui--article-footers:after {
     display: block !important;
     content: " " !important;
@@ -416,6 +451,35 @@ hr + .skel--gui--articles {
     margin-top: 2.4em;
 }
 /* SKEL: GUI:
+    credit-aside
+*/
+#page-footer .ui.hidden.divider {
+}
+#skel--gui--footer-credit-aside {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+/* SKEL: GUI:
+    credit aside sns list
+*/
+.skel--gui--credit-aside-sns {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.skel--gui--credit-aside-sns li {
+    display: inline-block !important;
+    list-style-type: none !important;
+}
+.skel--gui--credit-aside-sns li a {
+    color: black;
+}
+.skel--gui--credit-aside-sns li + li:before {
+    content: " | ";
+    display: inline-block;
+}
+/* SKEL: GUI:
     top to bottom button
 */
 #skel--gui--jump-to-top a {
@@ -501,6 +565,8 @@ hr + .skel--gui--articles {
 }
 .skel--gui--article-specs[data-skel-location-tag="postface"] {
 }
+.skel--gui--article-specs[data-skel-location-tag="postface"] {
+}
 .skel--gui--article-specs[data-skel-location-tag="postface"] .skel--gui--article-spec-dates,
 .skel--gui--article-specs[data-skel-location-tag="postface"] .skel--gui--article-spec-authors {
 }
@@ -564,12 +630,24 @@ hr + .skel--gui--articles {
 .skel--gui--widgets-tagcloud ul li span:after {
     content: ")";
 }
+.skel--gui--widgets-tagcloud .widget-bodies > p {
+    margin-left: 1em;
+    margin-right: 1em;
+}
 /* SKEL: GUI: WIDGETS
     profile
 */
 .skel--gui--widgets-profile .widget-bodies > .ui.card {
     margin-left: auto;
     margin-right: auto;
+    color: rgba( 0, 0, 0, .87 ) !important;
+    font-weight: 600;
+}
+.skel--gui--widgets-profile .widget-bodies .extra.content li {
+    list-style-type: none;
+}
+.skel--gui--widgets-profile .widget-bodies .extra.content li a {
+    color: rgba( 0, 0, 0, .6 ) !important;
 }
 /* SKEL: GUI: WIDGETS
     icons
@@ -669,7 +747,7 @@ hr + .skel--gui--articles {
 #skel--page-header .skel--site-icons {
     border: 3px solid #ededed;
 }
-#skel--page-header {
+/*#skel--page-header {
     display: block;
     position: relative;
     width: 100%;
@@ -682,6 +760,26 @@ hr + .skel--gui--articles {
     background-size:
         cover
     ;
+}*/
+#skel--page-header {
+    display: block;
+    position: relative;
+}
+#skel--page-header:before {
+    display: block;
+    position: relative;
+    content: " ";
+    width: 100%;
+    min-width: 380px;
+    background:
+        top center
+        no-repeat
+        url( img/1080x180.png )
+    ;
+    background-size:
+        cover
+    ;
+    height: 180px;
 }
 #skel--page-header:after {
     content: " ";
@@ -695,14 +793,7 @@ hr + .skel--gui--articles {
     min-width: 360px;
     display: block;
 }
-#skel--page-header {
-    height: 180px;
-}
 #skel--page-header > h1 {
-    padding-top: 140px;
-}
-#skel--page-header {
-    margin-bottom: 120px;
 }
 #skel--page-header > h1 > span {
     display: block;
@@ -710,6 +801,7 @@ hr + .skel--gui--articles {
     width: 100%;
     min-width: 360px;
     min-height: 48px;
+    margin-top: -40px;
 }
 #skel--page-header > h1 > span:before {
     content: "&nbsp;";
@@ -820,6 +912,13 @@ hr + .skel--gui--articles {
 [itemprop="articleBody"] > table > tbody > tr > td {
     border: solid 1px #d9d9d9;
     padding: .2em;
+}
+[itemprop="articleBody"] img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    height: auto;
 }
 /* CRAYON SYNTAX HILIGHTER
     erase buggy trailing blank line

@@ -51,22 +51,28 @@
             </data>
         </span>
     </li>
-    <li
-        class="skel--gui--article-spec-categories"
-    >
-        <i class="ui folder open outline icon">
-            <span><?php _e('Categories', 'skel'); ?></span>
-        </i>
-        <span>
-            <data itemprop="genre">
-                <ul>
-                    <?php
-                        the_category( '</li><li>' );
-                    ?>
-                </ul>
-            </data>
-        </span>
-    </li>
+    <?php
+        if ( get_the_category( '</li><li>' ) ) :
+    ?>
+        <li
+            class="skel--gui--article-spec-categories"
+        >
+            <i class="ui folder open outline icon">
+                <span><?php _e('Categories', 'skel'); ?></span>
+            </i>
+            <span>
+                <data itemprop="genre">
+                    <ul>
+                        <?php
+                            the_category( '</li><li>' );
+                        ?>
+                    </ul>
+                </data>
+            </span>
+        </li>
+    <?php
+        endif;
+    ?>
     <li
         class="skel--gui--article-spec-tags<?php if ( !get_the_tags() ) { echo ' skel--no-contents'; } ?>"
     >

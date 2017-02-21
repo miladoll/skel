@@ -9,7 +9,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <?php endif ?>
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title><?php wp_title(); ?></title>
 <meta name="description" content="<?php bloginfo( 'description' ); ?>" />
 <!--
     FOR RESPONSIVE FUNCTIONALITY
@@ -34,18 +33,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!--
     SNS RELATED
 -->
-<meta property="og:locale" content="<?php echo get_locale(); ?>" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="<?php bloginfo( 'name' ); ?>" />
-<meta property="og:description" content="<?php bloginfo( 'description' ); ?>" />
-<meta property="og:url" content="<?php echo home_url(); ?>" />
-<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
-<?php if ( skel::prop('sns__twitter') != '' ) : ?>
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="<?php bloginfo( 'name' ); ?>" />
-<meta name="twitter:description" content="<?php bloginfo( 'description' ); ?>" />
-<meta name="twitter:site" content="@<?php echo skel::prop( 'sns__twitter', 'none' ); ?>" />
-<?php endif ?>
+<?php skel::include_parts('/skel/parts/html-head-content-sns-facebook.php'); ?>
+<?php skel::include_parts('/skel/parts/html-head-content-sns-twitter.php'); ?>
 <!--
     SITE ADMINISTRATION
 -->

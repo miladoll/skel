@@ -52,22 +52,31 @@ class skel_widget_profile extends skel_widget {
             <?php echo $instance['textarea_profile']; ?>
         </div>
     </div>
-    <?php if ( skel::prop('sns__twitter') != '' ) : ?>
-        <div
+    <?php
+        if (
+            skel::prop('sns__facebook') != ''
+            || skel::prop('sns__twitter') != ''
+            || skel::prop('sns__instagram') != ''
+            || skel::prop('sns__github') != ''
+        ) :
+    ?>
+        <ul
             class="extra content"
         >
-            <a
-                href="https://twitter.com/<?php echo skel::prop( 'sns__twitter', 'none' ); ?>"
-                title="<?php
-                    echo esc_html( sprintf( __('Check tweets of %s'), $instance['owner_name']) );
-                ?>"
-                target="_blank"
-            >
-                <i class="ui twitter icon"></i>
-                @<?php echo skel::prop( 'sns__twitter', 'none' ); ?>
-            </a>
-        </div>
-    <?php endif ?>
+        <?php
+            call_user_func( function() {
+                skel::include_parts(
+                    '/skel/parts/list-sns.php',
+                    [
+                        'owner_name' => $instance['owner_name']
+                    ]
+                );
+            } );
+        ?>
+        </ul>
+    <?php
+        endif;
+    ?>
 </div>
 <?php
     }
