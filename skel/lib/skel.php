@@ -350,23 +350,35 @@ class skel {
         ];
         if ( $q->have_posts() ) {
             $data = array_merge(
+                $data,
                  [
                     'title' => get_the_title(),
                     'url' => get_permalink(),
                     'description' => skel::get_proper_excerpt(),
-                ],
-                $data
+                ]
             );
+            $data['eyecatch'] = has_post_thumbnail();
+            if ( $data['eyecatch'] ) {
+                // $data['eyecatch'] = array_shift( wp_get_attachment_image_src() );
+                // -_-;; ?
+                $html_img_src_and_trash = array_pop( preg_split( '/^.*?\s{0,}src=[\"\']/', get_the_post_thumbnail() ) );
+                $html_img_src = array_shift( preg_split( '/[\"\']/', $html_img_src_and_trash ) );
+                $data['eyecatch'] = $html_img_src;
+            }
         }
         if ( is_home() ) {
             $data = array_merge(
-                 [
+                $data,
+                [
                     'title' => get_bloginfo( 'name' ),
                     'url' => home_url(),
                     'description' => get_bloginfo( 'description' ),
-                ],
-                $data
+                ]
             );
+            $data['eyecatch'] = false;
+        }
+        if ( !$data['title'] ) {
+            $data['title'] = $data['flourish_title'];
         }
         wp_reset_postdata();
         return( $data );

@@ -6,7 +6,7 @@
             <meta name="twitter:card" content="summary_large_image" />
             <meta
                 name="twitter:title"
-                content="<?php echo esc_attr( substr( $dat['flourish_title'], 0, 80 ) ); ?>"
+                content="<?php echo esc_attr( mb_substr( $dat['flourish_title'], 0, 80 ) ); ?>"
             />
             <meta
                 name="twitter:description"
@@ -18,7 +18,18 @@
             />
             <meta
                 name="twitter:image"
-                content="https://s.wordpress.com/mshots/v1/<?php echo $dat['url']; ?>?w=100"
+                <?php
+                    if ( $dat['eyecatch'] ) {
+
+                ?>
+                        content="<?php echo esc_attr( $dat['eyecatch'] ); ?>"
+                <?php
+                    } else {
+                ?>
+                        content="https://s.wordpress.com/mshots/v1/<?php echo urlencode( $dat['url'] ); ?>?w=100"
+                <?php
+                    }
+                ?>
             />
 <?php
         } );

@@ -123,7 +123,7 @@ $confs = [
             'label' => __( 'Owner Name', 'skel' ),
             'section' => 'sns',
             'default' => '',
-            'description' => __( 'オーナー名', 'skel' )
+            'description' => __( 'Owner Name', 'skel' )
         ]
     ],
     [

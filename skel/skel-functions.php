@@ -2,7 +2,6 @@
 
 /*
 TODO:
-[] 固定ページってちゃんとできるの？
 [] 他プラグインの翻訳入れられないかなあ
 [] COMMENT SUBMIT PAGE
 [] COMMENT LIST PAGE

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Skel - WordPress theme v0.9.1\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-02-18 09:27+0900\n"
+"POT-Creation-Date: 2017-02-22 00:39+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: MILA DOLL <no@example.com>\n"
@@ -37,143 +37,170 @@ msgstr "..."
 msgid "read more"
 msgstr "続きを読む"
 
-#: lib/skel.php:242
+#: lib/skel.php:253
 msgid "Articles"
 msgstr "記事一覧"
 
-#: lib/skel.php:245
+#: lib/skel.php:256
 msgid "Category: "
 msgstr "カテゴリー別："
 
-#: lib/skel.php:249
+#: lib/skel.php:260
 msgid "Search: "
 msgstr "検索結果："
 
-#: lib/skel.php:267
+#: lib/skel.php:278
 msgid "Date: "
 msgstr "日別："
 
-#: lib/skel.php:271
+#: lib/skel.php:282
 msgid "Tag: "
 msgstr "タグ別："
 
-#: lib/skel.php:275
+#: lib/skel.php:286
 msgid "Author: "
 msgstr "投稿者別："
 
-#: lib/skel.php:411
+#: lib/skel.php:508
 msgid "Related Posts"
 msgstr "関連記事"
 
-#: lib/skel.php:576
+#: lib/skel.php:673
 msgid "Site Global Menu"
 msgstr "サイトグローバルメニュー"
 
-#: lib/skel.php:577
+#: lib/skel.php:674
 msgid "Site Global Menu Aside"
 msgstr "サイトグローバルメニュー（脇）"
+
+#: lib/skel.php:675
+msgid "Site Global Menu Dropdown"
+msgstr "サイトグローバルメニュー（ドロップダウン）"
 
 #: lib/skel_config_customizer_confs.php:7
 msgid "Basis of Design"
 msgstr "基本デザイン"
 
 #: lib/skel_config_customizer_confs.php:16
-msgid "Whether disable CSS for pretty print or not"
-msgstr "装飾目的のCSSをオフにする"
+msgid "Whether disable searchbox in sticky header or not"
+msgstr "固定ヘッダ中の検索ボックスを消す"
 
 #: lib/skel_config_customizer_confs.php:17
-msgid "Disable Pretty CSS"
-msgstr "装飾目的CSSのオフ"
+msgid "Disable Header Searchbox"
+msgstr "ヘッダー中の検索ボックスをオフ"
 
 #: lib/skel_config_customizer_confs.php:21
+#: lib/skel_config_customizer_confs.php:36
 msgid "No (default)"
 msgstr "しない（デフォルト）"
 
 #: lib/skel_config_customizer_confs.php:22
+#: lib/skel_config_customizer_confs.php:37
 msgid "Disable"
 msgstr "オフにする"
 
 #: lib/skel_config_customizer_confs.php:31
+msgid "Whether disable CSS for pretty print or not"
+msgstr "装飾目的のCSSをオフにする"
+
+#: lib/skel_config_customizer_confs.php:32
+msgid "Disable Pretty CSS"
+msgstr "装飾目的CSSのオフ"
+
+#: lib/skel_config_customizer_confs.php:46
 msgid "Whether set sidebar left or right"
 msgstr "サイドバーを左に置くか右に置くか"
 
-#: lib/skel_config_customizer_confs.php:32
+#: lib/skel_config_customizer_confs.php:47
 msgid "Set Sidebar Right"
 msgstr "サイドバーの右置き"
 
-#: lib/skel_config_customizer_confs.php:36
+#: lib/skel_config_customizer_confs.php:51
 msgid "Left (default)"
 msgstr "左（デフォルト）"
 
-#: lib/skel_config_customizer_confs.php:37
+#: lib/skel_config_customizer_confs.php:52
 msgid "Right"
 msgstr "右"
 
-#: lib/skel_config_customizer_confs.php:46
+#: lib/skel_config_customizer_confs.php:61
 msgid ""
 "Display format string in article bodies (default: same as the system setting"
 msgstr ""
 "記事本文中での日時表示フォーマット文字列（デフォルト：システム設定とおなじ）"
 
-#: lib/skel_config_customizer_confs.php:47
+#: lib/skel_config_customizer_confs.php:62
 msgid "Date and Time: In Article Bodies"
 msgstr "日付・日時（記事本文中）"
 
-#: lib/skel_config_customizer_confs.php:57
+#: lib/skel_config_customizer_confs.php:72
 msgid "Site Administration"
 msgstr "サイトの管理"
 
-#: lib/skel_config_customizer_confs.php:66
+#: lib/skel_config_customizer_confs.php:81
 msgid "Google Search Console"
 msgstr "Googleサーチコンソール"
 
-#: lib/skel_config_customizer_confs.php:69
+#: lib/skel_config_customizer_confs.php:84
 msgid "set value of META tag"
 msgstr "Webコンソール所有確認用METAタグの値を入力する"
 
-#: lib/skel_config_customizer_confs.php:77
+#: lib/skel_config_customizer_confs.php:92
 msgid "Google Analytics"
 msgstr "Googleアナリティクス"
 
-#: lib/skel_config_customizer_confs.php:80
+#: lib/skel_config_customizer_confs.php:95
 msgid "set accounting tag"
 msgstr "アナリティクス管理用タグを入力する"
 
-#: lib/skel_config_customizer_confs.php:88
+#: lib/skel_config_customizer_confs.php:103
 msgid "Google Tag Manager"
 msgstr "Googleタグマネージャ"
 
-#: lib/skel_config_customizer_confs.php:91
+#: lib/skel_config_customizer_confs.php:106
 msgid "set manager container-ID (such as `GTM-xxxxx`)"
 msgstr "タグマネージャのコンテナID（`GTM-xxxxx`のような）を入力する"
 
-#: lib/skel_config_customizer_confs.php:99
+#: lib/skel_config_customizer_confs.php:114
 msgid "SNS Related"
 msgstr "SNS関連"
 
-#: lib/skel_config_customizer_confs.php:108
+#: lib/skel_config_customizer_confs.php:123
+#: lib/skel_config_customizer_confs.php:126 lib/skel_widget_profile.php:17
+msgid "Owner Name"
+msgstr "運営者の名前"
+
+#: lib/skel_config_customizer_confs.php:134
 msgid "Twitter"
 msgstr "Twitter"
 
-#: lib/skel_config_customizer_confs.php:111
+#: lib/skel_config_customizer_confs.php:137
 msgid "set account name (without @)"
 msgstr "アカウント名（@を除く）を入力する"
 
-#: lib/skel_config_customizer_confs.php:119
+#: lib/skel_config_customizer_confs.php:145
 msgid "Facebook"
 msgstr "Facebook"
 
-#: lib/skel_config_customizer_confs.php:122
+#: lib/skel_config_customizer_confs.php:148
 msgid "set URL for user page/facebook page"
 msgstr "FacebookアカウントまたはページのURLを入力する"
 
-#: lib/skel_config_customizer_confs.php:130
+#: lib/skel_config_customizer_confs.php:156
 msgid "Instagram"
 msgstr "Instagram"
 
-#: lib/skel_config_customizer_confs.php:133
+#: lib/skel_config_customizer_confs.php:159
 msgid "set URL for Instagram page"
 msgstr "InstagramのページURLを入力する"
+
+#: lib/skel_config_customizer_confs.php:167
+msgid "GitHub"
+msgstr "GitHub"
+
+#: lib/skel_config_customizer_confs.php:170
+msgid "set URL for Github page"
+msgstr "GitHubページのURLを入力する"
 
 #: lib/skel_config_widget_areas.php:5
 msgid "Widgets: Full Width Header"
@@ -280,10 +307,6 @@ msgstr "プロフィール"
 msgid "Profile of Site Owner"
 msgstr "運営者プロフィール"
 
-#: lib/skel_widget_profile.php:17
-msgid "Owner Name"
-msgstr "運営者の名前"
-
 #: lib/skel_widget_profile.php:21
 msgid "Profile Text"
 msgstr "プロフィール文"
@@ -291,11 +314,6 @@ msgstr "プロフィール文"
 #: lib/skel_widget_profile.php:25
 msgid "Profile Image"
 msgstr "プロフィール画像"
-
-#: lib/skel_widget_profile.php:62
-#, php-format
-msgid "Check tweets of %s"
-msgstr "%s のTwitterをチェックする"
 
 #: lib/skel_widget_search.php:4
 msgid "Site Search"
@@ -313,6 +331,10 @@ msgstr "タグ"
 msgid "Tag Cloud for This Site Articles"
 msgstr "このサイト内の記事のタグ"
 
+#: lib/skel_widget_tagcloud.php:25
+msgid "No tags, yet."
+msgstr "まだタグのついた記事がありません"
+
 #: parts/article-prev-nexts.php:22
 msgid "Next Article"
 msgstr "次の記事"
@@ -329,19 +351,19 @@ msgstr "日付"
 msgid "Author"
 msgstr "投稿者"
 
-#: parts/article-spec.php:58
+#: parts/article-spec.php:61
 msgid "Categories"
 msgstr "カテゴリ"
 
-#: parts/article-spec.php:74
+#: parts/article-spec.php:80
 msgid "Tags"
 msgstr "タグ"
 
-#: parts/article-spec.php:92 parts/article-spec.php:96
+#: parts/article-spec.php:101 parts/article-spec.php:105
 msgid "Comments"
 msgstr "コメント"
 
-#: parts/article-spec.php:114 parts/article-spec.php:118
+#: parts/article-spec.php:129 parts/article-spec.php:133
 msgid "Trackbacks"
 msgstr "トラックバック"
 
@@ -354,6 +376,30 @@ msgstr "ホーム"
 msgid "Jump to top"
 msgstr "ページの最初へ"
 
+#: parts/list-sns.php:8
+#, php-format
+msgid "Visit Facebook page of %s"
+msgstr "%s のFacebookページにアクセス"
+
+#: parts/list-sns.php:26
+#, php-format
+msgid "Check tweets of %s"
+msgstr "%s のTwitterをチェックする"
+
+#: parts/list-sns.php:44
+#, php-format
+msgid "Check photos took by %s"
+msgstr "%s が撮ったInstagramをチェック"
+
+#: parts/list-sns.php:62
+#, php-format
+msgid "Check GitHub page of %s"
+msgstr "%s のGitHubページをチェック"
+
+#: parts/menu-siteglobal.php:110 parts/searchform.php:17
+msgid "Search"
+msgstr "検索"
+
 #: parts/pager.php:21
 msgid "Previous"
 msgstr "前ページ"
@@ -365,10 +411,6 @@ msgstr "次ページ"
 #: parts/searchform.php:11
 msgid "keywords"
 msgstr "キーワード"
-
-#: parts/searchform.php:17
-msgid "Search"
-msgstr "検索"
 
 #~ msgid "set manager tag"
 #~ msgstr "タグマネージャタグを入力する"
