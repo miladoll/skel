@@ -1,5 +1,7 @@
 # WordPress用テーマ `skel`
 
+![Skelton](screenshot.png)
+
 `skel` は「がいこつのようにシンプルであまりゴテゴテしていない」WordPress用のテーマです。
 …が、つくってるうちにわりとそれなりの機能がついてしまいました。
 
