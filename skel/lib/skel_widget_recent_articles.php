@@ -18,6 +18,12 @@ class skel_widget_recent_articles extends skel_widget {
                 'description' => __('How many posts to be shown in this widget', 'skel')
             ],
             [
+                'field_name' => 'is_omission_excerpt',
+                'title' => __('Excerpt Ommission', 'skel'),
+                'description' => __('Will ommit excerpt or no. default: no', 'skel'),
+                'default' => false,
+            ],
+            [
                 'field_name' => 'radio_visual_type',
                 'title' => __('Visual Type', 'skel'),
                 'choice' => [
@@ -112,9 +118,15 @@ class skel_widget_recent_articles extends skel_widget {
                                 );
                             ?>
                         </time>
-                        <span>
-                            <?php echo esc_html( $excerpt ); ?>
-                        </span>
+                        <?php
+                            if ( !$instance['is_omission_excerpt'] ) :
+                        ?>
+                            <span>
+                                <?php echo esc_html( $excerpt ); ?>
+                            </span>
+                        <?php
+                            endif;
+                        ?>
                     </section>
                 </a>
             </li>

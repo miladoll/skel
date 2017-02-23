@@ -316,6 +316,25 @@ class skel_widget extends WP_Widget {
         <?php
     }
 
+    protected function show_field_is( $opt, $instance = [] ) {
+        if ( empty( $opt ) ) {
+            return;
+        }
+        $opt['choice'] = [
+            [
+                'name' => __('yes', 'skel'),
+                'value' => true,
+                'is_default' => ( $opt['default'] === true ) ? true : false,
+            ],
+            [
+                'name' => __('no', 'skel'),
+                'value' => false,
+                'is_default' => ( $opt['default'] === false ) ? false : true,
+            ]
+        ];
+        self::show_field_radio( $opt, $instance );
+    }
+
     public function form ( $instance ) {
         foreach ( $this->CONFIG_FIELDS() as $conf ) {
             $conf['value'] = $instance[ $conf['field_name'] ];
@@ -329,6 +348,9 @@ class skel_widget extends WP_Widget {
                     break;
                 case 'radio' :
                     $this->show_field_radio( $conf, $instance );
+                    break;
+                case 'is' :
+                    $this->show_field_is( $conf, $instance );
                     break;
                 default:
                     $this->show_field( $conf, $instance );
