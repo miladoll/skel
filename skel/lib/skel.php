@@ -328,19 +328,58 @@ class skel {
         return( $url );
     }
 
-    public static function get_proper_excerpt() {
-        $this_post = get_post( get_the_ID() );
-        $content = get_the_excerpt();
-        if ( strlen( $content ) < 1 ) {
-            $content = $this_post->post_content;
+    public static function get_trail_added ( $content = '' ) {
+        if ( strlen( $content ) > 0 ) {
+            $content = $content
+                . self::DEFAULT_READ_MORE_TRAILING_TEXT()
+            ;
         }
-        $content = preg_replace( '/\[[^\]]{0,}\]/m', '', $content );
-        $content = wp_strip_all_tags( $content );
-        $content = preg_replace( '/\s+/m', ' ', $content );
+        return( $content );
+    }
+
+    public static function get_proper_excerpt( $opt_id = '' ) {
+        $this_post =
+            get_post(
+                ( !empty($opt_id) ) ? $opt_id : get_the_ID()
+            )
+        ;
+        $_strip_tags_and_spaces = function( $content ) {
+            $content = preg_replace( '/\[[^\]]{0,}\]/m', '', $content );
+            $content = wp_strip_all_tags( $content );
+            $content = preg_replace( '/\s+/m', ' ', $content );
+            return( $content );
+        };
+        $content = $_strip_tags_and_spaces( get_the_excerpt() );
+        if ( strlen( $content ) > 0 ) {
+            return( $content );
+        }
+        $content = $this_post->post_content;
+        $content = $_strip_tags_and_spaces( $content );
         $content = substr(
             $content, 0, self::DEFAULT_EXCERPT_LENGTH
         );
-        return( $content );
+        return( self::get_trail_added( $content ) );
+    }
+
+    public static function get_proper_thumbnail_path_of_article( $id = '' ) {
+        $img_src = skel::get_image_path_from_thumbnail_element(
+            get_the_post_thumbnail( $id )
+        );
+        if ( $img_src ) return( $img_src );
+        $post = get_post( $id );
+        preg_match(
+            '/<img\s{1,}.*src=[\'"]([^\'\"]+)[\'"]/',
+            $post->post_content,
+            $matches
+        );
+        $img_src = $matches[1];
+        return( $img_src );
+    }
+
+    public static function get_image_path_from_thumbnail_element( $elem = '' ) {
+        $html_img_src_and_trash = array_pop( preg_split( '/^.*?\s{0,}src=[\"\']/', $elem ) );
+        $html_img_src = array_shift( preg_split( '/[\"\']/', $html_img_src_and_trash ) );
+        return( $html_img_src );
     }
 
     public static function get_current_post_data() {
@@ -361,9 +400,11 @@ class skel {
             if ( $data['eyecatch'] ) {
                 // $data['eyecatch'] = array_shift( wp_get_attachment_image_src() );
                 // -_-;; ?
-                $html_img_src_and_trash = array_pop( preg_split( '/^.*?\s{0,}src=[\"\']/', get_the_post_thumbnail() ) );
-                $html_img_src = array_shift( preg_split( '/[\"\']/', $html_img_src_and_trash ) );
-                $data['eyecatch'] = $html_img_src;
+                $data['eyecatch'] =
+                    self::get_image_path_from_thumbnail_element(
+                        get_the_post_thumbnail()
+                    )
+                ;
             }
         }
         if ( is_home() ) {

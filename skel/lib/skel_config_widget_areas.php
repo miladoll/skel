@@ -46,5 +46,15 @@ $confs =
             'description' => __( 'the widget space located to foot of pages : right (last)', 'skel' ),
             'id' => 'footer-right'
         ],
+        [
+            'name' => __( 'Widgets: Single Article\'s Under Header', 'skel' ),
+            'description' => __( 'the widget space located to beneath headers of articles when it is singular', 'skel' ),
+            'id' => 'article-header-under'
+        ],
+        [
+            'name' => __( 'Widgets: Single Article\'s Under Footer', 'skel' ),
+            'description' => __( 'the widget space located to beneath footers of articles when it is singular', 'skel' ),
+            'id' => 'article-footer-under'
+        ],
     ]
 ;

@@ -153,53 +153,55 @@ class skel_widget extends WP_Widget {
     height: 5em;
 }
 </style>
-        <p>
-            <label
-                for="<?php echo esc_attr( $opt['id'] ); ?>"
-            >
-                <?php echo esc_html( $opt['title'] ); ?>
-                :
-            </label>
-            <button
-                type="button"
-                name="<?php echo esc_attr( $opt['name'] ) ?>"
-                id="<?php echo esc_attr( $opt['id'] ) ?>"
-                class="skel--adm--image-uploaders"
-                data-skel-image-multiple="false"
-                data-skel-gettextdict="skel-admin-media-uploader"
-                data-skel-gettext-choose-image="<?php echo __( 'Choose Image', 'skel' ); ?>"
-                data-skel-gettext-show-in-new-window="<?php echo __( 'show in new window', 'skel' ); ?>"
-                data-skel-gettext-dismiss="<?php echo __( 'Dismisss', 'skel' ); ?>"
-            >
-                <?php echo __( 'Choose Image', 'skel' ); ?>
-                <ul
-                    style="display: none;"
-                >
-                    <?php
-                        foreach ( $images as $image ) :
-                    ?>
-                        <li
-                            data-skel-image-url="<?php echo esc_attr( $image ); ?>"
-                        ></li>
-                    <?php
-                        endforeach;
-                    ?>
-                </ul>
-            </button>
-            <script>
-                jQuery(document).ready( function(){
-                    skel.set_dict();
-                    skel.admin.media_uploader.set_html_of_registered_images(
-                        '#<?php echo esc_attr( $opt['id'] ) ?>'
-                    );
-                    skel.admin.media_uploader.on_ready();
-                } );
-            </script>
-            <span
-                id="skel--adm--image-uploader-<?php echo $opt['id']; ?>"
-                class="skel--adm--image-uploader-image-lists"
-            ></span>
-        </p>
+            <dl>
+                <dt>
+                    <label
+                        for="<?php echo esc_attr( $opt['id'] ); ?>"
+                    >
+                        <?php echo esc_html( $opt['title'] ); ?>
+                        :
+                    </label>
+                <dd>
+                    <button
+                        type="button"
+                        name="<?php echo esc_attr( $opt['name'] ) ?>"
+                        id="<?php echo esc_attr( $opt['id'] ) ?>"
+                        class="skel--adm--image-uploaders"
+                        data-skel-image-multiple="false"
+                        data-skel-gettextdict="skel-admin-media-uploader"
+                        data-skel-gettext-choose-image="<?php echo __( 'Choose Image', 'skel' ); ?>"
+                        data-skel-gettext-show-in-new-window="<?php echo __( 'show in new window', 'skel' ); ?>"
+                        data-skel-gettext-dismiss="<?php echo __( 'Dismisss', 'skel' ); ?>"
+                    >
+                        <?php echo __( 'Choose Image', 'skel' ); ?>
+                        <ul
+                            style="display: none;"
+                        >
+                            <?php
+                                foreach ( $images as $image ) :
+                            ?>
+                                <li
+                                    data-skel-image-url="<?php echo esc_attr( $image ); ?>"
+                                ></li>
+                            <?php
+                                endforeach;
+                            ?>
+                        </ul>
+                    </button>
+                    <script>
+                        jQuery(document).ready( function(){
+                            skel.set_dict();
+                            skel.admin.media_uploader.set_html_of_registered_images(
+                                '#<?php echo esc_attr( $opt['id'] ) ?>'
+                            );
+                            skel.admin.media_uploader.on_ready();
+                        } );
+                    </script>
+                    <span
+                        id="skel--adm--image-uploader-<?php echo $opt['id']; ?>"
+                        class="skel--adm--image-uploader-image-lists"
+                    ></span>
+            </dl>
         <?php
     }
 
@@ -209,23 +211,33 @@ class skel_widget extends WP_Widget {
         }
         $opt['name'] = $this->get_field_name($opt['field_name']);
         $opt['id'] = $this->get_field_id($opt['field_name']);
-?>
-    <p>
-        <label
-            for="<?php echo $opt['id']; ?>"
-        >
-            <?php echo esc_html( $opt['title'] ); ?>
-            :
-        </label>
-        <input
-            class="widefat"
-            id="<?php echo $opt['id']; ?>"
-            name="<?php echo $opt['name']; ?>"
-            type="text"
-            value="<?php echo esc_attr( $opt['value'] ); ?>"
-        >
-    </p>
-<?php
+        ?>
+            <dl>
+                <dt>
+                    <label
+                        for="<?php echo $opt['id']; ?>"
+                    >
+                        <?php echo esc_html( $opt['title'] ); ?>
+                        :
+                    </label>
+                <dd>
+                    <input
+                        class="widefat"
+                        id="<?php echo $opt['id']; ?>"
+                        name="<?php echo $opt['name']; ?>"
+                        type="text"
+                        value="<?php echo esc_attr( $opt['value'] ); ?>"
+                    >
+                <?php
+                    if ( $opt['description'] ) :
+                ?>
+                    <dd>
+                        <?php echo esc_attr( $opt['description'] ); ?>
+                <?php
+                    endif;
+                ?>
+            </dl>
+        <?php
     }
 
     protected function show_field_textarea( $opt, $instance = [] ) {
@@ -234,21 +246,74 @@ class skel_widget extends WP_Widget {
         }
         $opt['name'] = $this->get_field_name($opt['field_name']);
         $opt['id'] = $this->get_field_id($opt['field_name']);
-?>
-    <p>
-        <label
-            for="<?php echo $opt['id']; ?>"
-        >
-            <?php echo esc_html( $opt['title'] ); ?>
-            :
-        </label>
-        <textarea
-            class="widefat skel--adm--fields-textarea"
-            id="<?php echo $opt['id']; ?>"
-            name="<?php echo $opt['name']; ?>"
-        ><?php echo esc_html( $opt['value'] ); ?></textarea>
-    </p>
-<?php
+        ?>
+            <dl>
+                <dt>
+                    <label
+                        for="<?php echo $opt['id']; ?>"
+                    >
+                        <?php echo esc_html( $opt['title'] ); ?>
+                        :
+                    </label>
+                <dd>
+                    <textarea
+                        class="widefat skel--adm--fields-textarea"
+                        id="<?php echo $opt['id']; ?>"
+                        name="<?php echo $opt['name']; ?>"
+                    ><?php echo esc_html( $opt['value'] ); ?></textarea>
+            </dl>
+        <?php
+    }
+
+    protected function show_field_radio( $opt, $instance = [] ) {
+        if ( empty( $opt ) ) {
+            return;
+        }
+        $opt['name'] = $this->get_field_name($opt['field_name']);
+        $opt['id'] = $this->get_field_id($opt['field_name']);
+        ?>
+            <dl>
+                <dt>
+                    <label
+                        for="<?php echo $opt['id']; ?>"
+                    >
+                        <?php echo esc_html( $opt['title'] ); ?>
+                        :
+                    </label>
+                <dd>
+                    <dl>
+                        <?php
+                            foreach( $opt['choice'] as $item ) :
+                                $checked = '';
+                                if (
+                                    (
+                                        empty( $opt['value'] )
+                                        && $item['is_default'] === true
+                                    )
+                                    ||
+                                    (
+                                        $opt['value'] == $item['value']
+                                    )
+                                ) {
+                                    $checked = 'checked="checked"';
+                                }
+                        ?>
+                            <dt>
+                                <input
+                                    type="radio"
+                                    name="<?php echo $opt['name']; ?>"
+                                    value="<?php echo esc_attr( $item['value'] ); ?>"
+                                    <?php echo $checked; ?>
+                                >
+                                <?php echo esc_html( $item['name'] ); ?><br>
+                            <dd>
+                                <?php echo esc_html( $item['description'] ); ?>
+                        <?php
+                            endforeach;
+                        ?>
+                    </dl>
+            </dl>
+        <?php
     }
 
     public function form ( $instance ) {
@@ -261,6 +326,9 @@ class skel_widget extends WP_Widget {
                     break;
                 case 'textarea' :
                     $this->show_field_textarea( $conf, $instance );
+                    break;
+                case 'radio' :
+                    $this->show_field_radio( $conf, $instance );
                     break;
                 default:
                     $this->show_field( $conf, $instance );

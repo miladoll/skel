@@ -66,6 +66,15 @@
         ?>
     <?php endif ?>
 
+    <?php
+        skel::include_parts(
+            '/skel/parts/widget-singular-only.php',
+            [
+                'skel_widget_area' => 'article-header-under'
+            ]
+        );
+    ?>
+
     <div itemprop="articleBody">
         <?php
             call_user_func( function() {
@@ -119,6 +128,15 @@
     </footer><!-- class="skel--gui--article-footers" -->
 
 </article><!-- class="skel--gui--articles" -->
+
+<?php
+    skel::include_parts(
+        '/skel/parts/widget-singular-only.php',
+        [
+            'skel_widget_area' => 'article-footer-under'
+        ]
+    );
+?>
 
 <!--
     PREV NEXT

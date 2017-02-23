@@ -607,6 +607,14 @@ hr + .skel--gui--articles {
     margin-left: auto;
     margin-right: auto;
 }
+.skel--gui--widgets[data-skel-area="article-header-under"] > aside {
+    margin-left: auto;
+    margin-right: auto;
+}
+.skel--gui--widgets[data-skel-area="article-footer-under"] > aside {
+    margin-left: auto;
+    margin-right: auto;
+}
 /* SKEL: GUI: WIDGETS
     tagcloud
 */
@@ -633,6 +641,76 @@ hr + .skel--gui--articles {
 .skel--gui--widgets-tagcloud .widget-bodies > p {
     margin-left: 1em;
     margin-right: 1em;
+}
+/* SKEL: GUI: WIDGETS
+    recent articles
+*/
+.skel--gui--widgets-recent-articles {
+}
+.skel--gui--widgets-recent-articles:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+.skel--gui--widgets-recent-articles .ui.list {
+    margin-left: 0 !important;
+}
+.skel--gui--widgets-recent-articles .ui.list li:before {
+    content: none !important;
+    display: none !important;
+}
+.skel--gui--widgets-recent-articles .ui.list li {
+    max-height: 8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}
+.skel--gui--widgets-recent-articles .ui.list[data-skel-visual-type="three-columned"] li {
+    width: 30%;
+    min-width: 250px;
+    min-height: 110px;
+    float: left;
+    margin-left: 1.5em;
+}
+.skel--gui--widgets-recent-articles .ui.list li + li {
+    margin-top: 0.8em;
+}
+.skel--gui--widgets-recent-articles .ui.list li > a > div {
+    display: block;
+    float: left;
+    margin-right: .8em !important;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 0.5em;
+    box-shadow: 0 0 2px 2px rgba( 220, 220, 220, .8 );
+    margin-left: 2px;
+}
+.skel--gui--widgets-recent-articles .ui.list li > a > div > img {
+}
+.skel--gui--widgets-recent-articles .ui.list li > a > section {
+    display: block;
+    overflow: hidden;
+}
+.skel--gui--widgets-recent-articles .ui.list li > a > section > header {
+    font-weight: bold;
+    font-size: 110%;
+}
+.skel--gui--widgets-recent-articles .ui.list li > a > section > time {
+    display: block;
+    margin-left: .8em;
+    color: rgba( 0, 0, 0, .87 );
+    text-align: right;
+}
+.skel--gui--widgets-recent-articles .ui.list li > a > section > time:before {
+    content: "(";
+}
+.skel--gui--widgets-recent-articles .ui.list li > a> section > time:after {
+    content: ")";
+}
+.skel--gui--widgets-recent-articles .ui.list li > a > section > span {
+    display: block;
+    margin-left: .8em;
+    color: rgba( 0, 0, 0, .87 );
 }
 /* SKEL: GUI: WIDGETS
     profile

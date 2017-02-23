@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Skel - WordPress theme v0.9.1\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-02-22 00:39+0900\n"
+"POT-Creation-Date: 2017-02-22 13:36+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: MILA DOLL <no@example.com>\n"
@@ -273,6 +273,24 @@ msgstr "サイドバー: フッタ（右）"
 #: lib/skel_config_widget_areas.php:46
 msgid "the widget space located to foot of pages : right (last)"
 msgstr "フッタ部分で横三連のうち右（三番目）のウィジェット用スペース"
+
+#: lib/skel_config_widget_areas.php:50
+msgid "Widgets: Single Article's Under Header"
+msgstr "サイドバー: 記事本文ヘッダ下部（単一表示時）"
+
+#: lib/skel_config_widget_areas.php:51
+msgid ""
+"the widget space located to beneath headers of articles when it is singular"
+msgstr "記事本文ヘッダ下部のウィジェット用スペース（単一表示時）"
+
+#: lib/skel_config_widget_areas.php:55
+msgid "Widgets: Single Article's Under Footer"
+msgstr "サイドバー: 記事本文フッタ下部（単一表示時）"
+
+#: lib/skel_config_widget_areas.php:56
+msgid ""
+"the widget space located to beneath footers of articles when it is singular"
+msgstr "記事本文フッタ下部のウィジェット用スペース（単一表示時）"
 
 #: lib/skel_widget.php:5
 msgid "Widget"
