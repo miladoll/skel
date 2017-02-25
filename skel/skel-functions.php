@@ -20,4 +20,8 @@ require_once 'lib/skel_widget_tagcloud.php';
 require_once 'lib/skel_widget_profile.php';
 require_once 'lib/skel_widget_recent_articles.php';
 
+require_once 'lib/skel_shortcode.php';
+require_once 'lib/skel_shortcode_centered.php';
+require_once 'lib/skel_shortcode_johnson.php';
+
 require_once 'lib/skel_bundle_plugin.php';

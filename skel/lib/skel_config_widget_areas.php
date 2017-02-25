@@ -56,5 +56,10 @@ $confs =
             'description' => __( 'the widget space located to beneath footers of articles when it is singular', 'skel' ),
             'id' => 'article-footer-under'
         ],
+        [
+            'name' => __( 'Widget: Between Articles', 'skel' ),
+            'description' => __( 'widget spaces between articles when the page is not singular', 'skel' ),
+            'id' => 'between-articles'
+        ],
     ]
 ;

@@ -99,6 +99,15 @@ class skel_widget_recent_articles extends skel_widget {
                             >
                         </div>
                     <?php
+                        else :
+                    ?>
+                        <div>
+                            <img
+                                class="ui top aligned tiny image"
+                                src="https://s.wordpress.com/mshots/v1/<?php echo urlencode( $url ); ?>?w=100"
+                            >
+                        </div>
+                    <?php
                         endif;
                     ?>
                     <section>

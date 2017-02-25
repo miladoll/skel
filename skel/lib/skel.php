@@ -349,14 +349,14 @@ class skel {
             $content = preg_replace( '/\s+/m', ' ', $content );
             return( $content );
         };
-        $content = $_strip_tags_and_spaces( get_the_excerpt() );
-        if ( strlen( $content ) > 0 ) {
+        if ( has_excerpt( $this_post->ID ) ) {
+            $content = $_strip_tags_and_spaces( get_the_excerpt( $this_post->ID ) );
             return( $content );
         }
         $content = $this_post->post_content;
         $content = $_strip_tags_and_spaces( $content );
-        $content = substr(
-            $content, 0, self::DEFAULT_EXCERPT_LENGTH
+        $content = mb_substr(
+            $content, 0, intval( self::DEFAULT_EXCERPT_LENGTH / 2 )
         );
         return( self::get_trail_added( $content ) );
     }
@@ -658,6 +658,13 @@ class skel {
                 . self::PREG_QUOTED_FQDN()
                 . '/i',
              "$1",
+             $buffer
+        );
+        // and other trustfull sites
+        $buffer = preg_replace(
+             '/(<img.*?src=[\'"])https?:(\/\/s\.wordpress\.com\/mshots)'
+                . '/i',
+             "$1$2",
              $buffer
         );
         return( $buffer );

@@ -195,6 +195,21 @@ ul.horizontal.data-items li > .content {
     right: .2em;
 }
 /* SKEL: GUI:
+    article admin area
+*/
+.skel--gui--articles-admin-areas {
+    display: block;
+    text-align: right;
+    margin-right: 1em;
+}
+.skel--gui--articles-admin-areas .skel--gui--articles-admin-areas-button-edits {
+}
+.skel--gui--articles-admin-areas .skel--gui--articles-admin-areas-button-edits:before {
+    font-family: Icons;
+    content: "\f044";
+    color: #f0f0f0;
+}
+/* SKEL: GUI:
     forms
 */
 .skel--gui--forms {
@@ -615,6 +630,17 @@ hr + .skel--gui--articles {
     margin-left: auto;
     margin-right: auto;
 }
+.skel--gui--widgets[data-skel-area="between-articles"] {
+}
+.skel--gui--widgets[data-skel-area="between-articles"] > aside,
+.skel--gui--widgets[data-skel-area="between-articles"] > aside > * {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.skel--gui--widgets[data-skel-area="between-articles"] > aside > .textwidget {
+    text-align: center;
+}
 /* SKEL: GUI: WIDGETS
     tagcloud
 */
@@ -668,12 +694,15 @@ hr + .skel--gui--articles {
 .skel--gui--widgets-recent-articles .ui.list[data-skel-visual-type="three-columned"] li {
     width: 30%;
     min-width: 250px;
-    min-height: 110px;
+    min-height: 100px;
     float: left;
     margin-left: 1.5em;
 }
 .skel--gui--widgets-recent-articles .ui.list li + li {
     margin-top: 0.8em;
+}
+.skel--gui--widgets[data-skel-area="header-full-width"] .skel--gui--widgets-recent-articles .ui.list li + li {
+    margin-top: 0;
 }
 .skel--gui--widgets-recent-articles .ui.list li > a > div {
     display: block;
@@ -952,6 +981,21 @@ hr + .skel--gui--articles {
 /* JETPACK
     with jetpack's markdown extra
 */
+[itemprop="articleBody"] > hr {
+    margin: 3.2em 3em;
+    border-top: 1px dashed #8c8b8b;
+}
+[itemprop="articleBody"] > hr:after {
+    content: '\002702';
+    display: inline-block;
+    position: relative;
+    top: -.5em;
+    left: 40px;
+    padding: 0 3px;
+    background: #fff;
+    color: #8c8b8b;
+    font-size: 18px;
+}
 [itemprop="articleBody"] em {
     margin:0 0.1em;
     padding:0.1em 0.2em;

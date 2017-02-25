@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Skel - WordPress theme v0.9.1\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-02-22 13:36+0900\n"
+"POT-Creation-Date: 2017-02-23 20:47+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: MILA DOLL <no@example.com>\n"
@@ -61,19 +61,19 @@ msgstr "タグ別："
 msgid "Author: "
 msgstr "投稿者別："
 
-#: lib/skel.php:508
+#: lib/skel.php:549
 msgid "Related Posts"
 msgstr "関連記事"
 
-#: lib/skel.php:673
+#: lib/skel.php:714
 msgid "Site Global Menu"
 msgstr "サイトグローバルメニュー"
 
-#: lib/skel.php:674
+#: lib/skel.php:715
 msgid "Site Global Menu Aside"
 msgstr "サイトグローバルメニュー（脇）"
 
-#: lib/skel.php:675
+#: lib/skel.php:716
 msgid "Site Global Menu Dropdown"
 msgstr "サイトグローバルメニュー（ドロップダウン）"
 
@@ -292,6 +292,16 @@ msgid ""
 "the widget space located to beneath footers of articles when it is singular"
 msgstr "記事本文フッタ下部のウィジェット用スペース（単一表示時）"
 
+#: lib/skel_config_widget_areas.php:60
+msgid "Widget: Between Articles"
+msgstr "サイドバー: 記事と記事のあいだ"
+
+#: lib/skel_config_widget_areas.php:61
+msgid "widget spaces between articles when the page is not singular"
+msgstr ""
+"記事と記事のあいだに展開するウィジェット用スペース（記事単独ページでは展開さ"
+"れません）"
+
 #: lib/skel_widget.php:5
 msgid "Widget"
 msgstr "ウィジェット"
@@ -301,21 +311,30 @@ msgid "Widget Description"
 msgstr "ウィジェットの説明"
 
 #: lib/skel_widget.php:17 lib/skel_widget_profile.php:13
-#: lib/skel_widget_search.php:13 lib/skel_widget_tagcloud.php:13
+#: lib/skel_widget_recent_articles.php:13 lib/skel_widget_search.php:13
+#: lib/skel_widget_tagcloud.php:13
 msgid "title"
 msgstr "タイトル"
 
-#: lib/skel_widget.php:170 lib/skel_widget.php:174
+#: lib/skel_widget.php:172 lib/skel_widget.php:176
 msgid "Choose Image"
 msgstr "画像を選択する"
 
-#: lib/skel_widget.php:171
+#: lib/skel_widget.php:173
 msgid "show in new window"
 msgstr "別ウインドウで開く"
 
-#: lib/skel_widget.php:172
+#: lib/skel_widget.php:174
 msgid "Dismisss"
 msgstr "取り消す"
+
+#: lib/skel_widget.php:325
+msgid "yes"
+msgstr "する"
+
+#: lib/skel_widget.php:330
+msgid "no"
+msgstr "しない"
 
 #: lib/skel_widget_profile.php:4
 msgid "Profile"
@@ -332,6 +351,42 @@ msgstr "プロフィール文"
 #: lib/skel_widget_profile.php:25
 msgid "Profile Image"
 msgstr "プロフィール画像"
+
+#: lib/skel_widget_recent_articles.php:4 lib/skel_widget_recent_articles.php:7
+msgid "Recent Articles"
+msgstr "最近の記事"
+
+#: lib/skel_widget_recent_articles.php:17
+msgid "Number of Posts"
+msgstr "投稿数"
+
+#: lib/skel_widget_recent_articles.php:18
+msgid "How many posts to be shown in this widget"
+msgstr "このウィジェットで直近いくつの投稿を表示するか"
+
+#: lib/skel_widget_recent_articles.php:22
+msgid "Excerpt Ommission"
+msgstr "概要表示の省略"
+
+#: lib/skel_widget_recent_articles.php:23
+msgid "Will ommit excerpt or no. default: no"
+msgstr "記事概要の表示を省略するかどうか。デフォルト：省略しない"
+
+#: lib/skel_widget_recent_articles.php:28
+msgid "Visual Type"
+msgstr "見た目"
+
+#: lib/skel_widget_recent_articles.php:31
+msgid "default"
+msgstr "デフォルト（無指定時）"
+
+#: lib/skel_widget_recent_articles.php:37
+msgid "three columned"
+msgstr "横3つ並び"
+
+#: lib/skel_widget_recent_articles.php:38
+msgid "Items are horlizontally displayed. But only three recent articles"
+msgstr "投稿を水平方向に三つ並べます"
 
 #: lib/skel_widget_search.php:4
 msgid "Site Search"

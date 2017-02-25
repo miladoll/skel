@@ -54,6 +54,22 @@
         } );
     ?>
 
+    <!--
+    -->
+    <?php
+    ?>
+        <aside
+            class="skel--gui--articles-admin-areas"
+        >
+            <a
+                class="skel--gui--articles-admin-areas-button-edits"
+                href="/wp-admin/post.php?action=edit&post=<?php echo esc_attr( get_the_ID() );?>"
+                target="_blank"
+            ></a>
+        </aside>
+    <?php
+    ?>
+
     <!-- 
         EYE CATCH (THUMBNAIL)
     -->
@@ -159,6 +175,18 @@
             return;
         }
         skel::include_parts( '/skel/parts/article-jetpack-related.php' );
+    } );
+?>
+
+<!--
+    WIDGET AREA: BETWEEN ARTICLE
+-->
+<?php
+    call_user_func( function() {
+        if ( is_single() ) {
+            return;
+        }
+        skel::include_parts( '/skel/parts/widget-between-articles.php' );
     } );
 ?>
 
