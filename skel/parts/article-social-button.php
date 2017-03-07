@@ -53,6 +53,7 @@
                     ></span>
                 </a><!-- class="skel--hatenas" -->
                 <span>|</span>
+                <!-- 
                 <a
                     href="https://plus.google.com/share?url=<?php echo $post_url; ?>"
                     target="_blank"
@@ -65,7 +66,7 @@
                     <span
                         class="skel--social-shared-points"
                     ></span>
-                </a><!-- class="skel--gplus" -->
+                </a> --><!-- class="skel--gplus" -->
                 <span>|</span>
                 <a
                     href="http://line.me/R/msg/text/?<?php echo $post_url; ?>"

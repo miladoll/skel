@@ -111,7 +111,7 @@
     ?>
 
     <?php
-        skel::include_parts( '/skel/parts/jumptotop.php' );
+        // skel::include_parts( '/skel/parts/jumptotop.php' );
     ?>
 
     <hr class="ui hidden divider">

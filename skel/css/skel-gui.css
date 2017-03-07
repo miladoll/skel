@@ -978,6 +978,38 @@ hr + .skel--gui--articles {
     border-top: 1px solid #f0f0f0 !important;
     border-bottom: 3px double #dedede !important;
 }
+/* SKEL: GUI:
+    multimedia in article body
+*/
+[itemprop="articleBody"] a.skel--gui--magnifiers {
+    display: block;
+}
+[itemprop="articleBody"] a.skel--gui--magnifiers > span {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+[itemprop="articleBody"] a.skel--gui--magnifiers > span > img {
+    display: inline;
+    border: 1px solid gray;
+    border-radius: .8em;
+    box-shadow: 2px 1px 2px rgba(150, 150, 150, 0.86);
+}
+[itemprop="articleBody"] a.skel--gui--magnifiers > span > img:hover {
+    box-shadow: 4px 3px 4px rgba(150, 150, 150, 0.86);
+}
+[itemprop="articleBody"] a.skel--gui--magnifiers > span:before {
+    position: absolute;
+    vertical-align: top;
+    margin-left: .4em;
+    content: "\f002";
+    font-family: Icons;
+    font-size: 3em;
+    line-height: 1.6em;
+    color: rgba(109, 109, 109, 0.78);
+    text-shadow: 4px 3px 4px rgba(150, 150, 150, 0.86);
+}
+
 /* JETPACK
     with jetpack's markdown extra
 */
@@ -1014,7 +1046,7 @@ hr + .skel--gui--articles {
     background-color: #f7f7f7;
     border: 1px solid #e0e0e0;
     padding: 2px 4px;
-    font-size: .8em;
+    font-size: .825em;
     margin-left: .2em;
     margin-right: .2em;
 }

@@ -22,17 +22,17 @@ _EOF_;
 <style>
 .skel--gui--shortcode-{$shortcode_name}-blocks {
     position: relative;
-    font-weight: bold;
 }
 .skel--gui--shortcode-{$shortcode_name}-blocks > header {
     position: absolute;
     border: 1px solid rgba( 204, 204, 204, .5 );
     top: -.7em;
     left: 2.5em;
-    font-size: 180%;
+    font-size: 160%;
     padding: .3em .5em;
     background-color: white;
     box-shadow: 0 8px 8px -6px #333;
+    font-weight: bold;
 }
 .skel--gui--shortcode-{$shortcode_name}-blocks > div {
     padding: 2em;
@@ -43,16 +43,26 @@ _EOF_;
 }
 .skel--gui--shortcode-{$shortcode_name}-blocks > div > dl > dt {
     font-size: 116%;
+    margin-left: 2.8em;
+    font-weight: bold;
+}
+.skel--gui--shortcode-{$shortcode_name}-blocks > div > dl > dt + dd {
+    margin-top: .4em;
 }
 .skel--gui--shortcode-{$shortcode_name}-blocks > div > dl > dt:before {
     font-family: Icons;
     content: "\\f046";
     font-size: 140%;
-    margin-right: .4em;
+    margin-left: -2.2em;
+    margin-right: 0.4em;
     vertical-align: middle;
+    font-weight: bold;
 }
 .skel--gui--shortcode-{$shortcode_name}-blocks > div > dl > dd + dt {
-    margin-top: .4em;
+    margin-top: .8em;
+}
+.skel--gui--shortcode-{$shortcode_name}-blocks > div > dl > dd {
+    margin-left: 1.8em;
 }
 </style>
 _EOF_;

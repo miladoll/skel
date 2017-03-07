@@ -699,7 +699,9 @@ class skel {
             function () {
                 ob_start(
                     function($buffer) {
-                        return( self::_get_mixed_content_sanitized($buffer) );
+                        $buffer = self::_get_mixed_content_sanitized($buffer);
+                        $buffer = self::___add_class_to_enlarge_image($buffer);
+                        return( $buffer );
                     }
                 );
             },
@@ -932,6 +934,28 @@ class skel {
                 remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side');
             }
         );
+    }
+
+    public static function ___add_class_to_enlarge_image($buffer) {
+        $buffer =
+            preg_replace_callback(
+                '/(<a\s+)([^>]+>.*?)(<img.*?class=".*?wp-image.*?)(<\/a>)/i',
+                function( $matches ) {
+                    return(
+                        $matches[1]
+                        . 'class="skel--gui--magnifiers"'
+                        . ' title="' . __('click to enlarge', 'skel') . '"'
+                        . $matches[2]
+                        . '<span>'
+                        . $matches[3]
+                        . '</span>'
+                        . $matches[4]
+                    );
+                },
+                $buffer
+            )
+        ;
+        return( $buffer );
     }
 
     //
